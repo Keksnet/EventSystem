@@ -1,6 +1,25 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.5.31'
     id 'java'
+    id 'maven-publish'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            name 'repo-release'
+            url 'https://repo.nononitas.eu:443/artifactory/keinsurvival-public'
+            credentials {
+                username = property("repo.user")
+                password = property("repo.pass")
+            }
+        }
+    }
 }
 
 group = 'de.neo'
