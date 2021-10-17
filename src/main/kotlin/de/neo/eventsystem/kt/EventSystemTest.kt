@@ -1,4 +1,4 @@
-package de.neo.eventsystem
+package de.neo.eventsystem.kt
 
 fun main() {
     val eSys = EventSystem()

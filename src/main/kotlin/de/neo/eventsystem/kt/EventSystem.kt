@@ -1,4 +1,4 @@
-package de.neo.eventsystem
+package de.neo.eventsystem.kt
 
 import java.lang.reflect.Method
 
